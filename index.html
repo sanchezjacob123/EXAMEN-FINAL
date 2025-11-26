@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Sony</title>
+    <link rel="stylesheet" href="sony.css">
+</head>
+<body>
+
+<header>
+    <div class="header-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNqbB8b4-nWjmMf0CBfbZRiOFQULaDdkffiq48Ht0vMbiOZ6BLckpD7OMlx8JdeWGjTY&usqp=CAU" class="logo" alt="Logo Sony">
+        <h1>Productos Sony</h1>
+    </div>
+</header>
+
+<main>
+    <!-- BUSCADOR -->
+    <section class="buscador-container">
+        <input type="text" id="buscador" placeholder="Buscar producto...">
+        <button id="btn-buscar">Buscar</button>
+    </section>
+
+    <!-- ESTADÍSTICAS RÁPIDAS -->
+    <section class="stats-container">
+        <div class="stat">
+            <h3 id="total-productos">0</h3>
+            <p>Total de productos</p>
+        </div>
+        <div class="stat">
+            <h3 id="productos-stock">0</h3>
+            <p>En stock</p>
+        </div>
+        <div class="stat">
+            <h3 id="productos-sin-stock">0</h3>
+            <p>Sin stock</p>
+        </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="categorias-container">
+        <h2>Categorías</h2>
+        <div class="categorias">
+            <button class="btn-categoria" data-categoria="Audífonos">Audífonos</button>
+            <button class="btn-categoria" data-categoria="Televisores">Televisores</button>
+            <button class="btn-categoria" data-categoria="Consolas">Consolas</button>
+            <button class="btn-categoria" data-categoria="Otros">Otros</button>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE AGREGAR PRODUCTO -->
+    <section class="form-container">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="formSony">
+            <input type="text" id="producto" placeholder="Nombre del producto" required>
+            <input type="text" id="marca" placeholder="Marca" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <input type="text" id="imagen" placeholder="URL de la Imagen" required>
+            <button type="submit" class="btn-agregar">Guardar Producto</button>
+        </form>
+    </section>
+
+    <!-- LISTADO DE PRODUCTOS -->
+    <h2 class="titulo-listado">Listado de Productos</h2>
+    <section id="contenedor" class="cards-container"></section>
+</main>
+
+<!-- MODAL DE EDICIÓN -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Editar Producto</h2>
+        <form id="formEditar">
+            <input type="text" id="edit-producto" placeholder="Nombre del producto" required>
+            <input type="text" id="edit-marca" placeholder="Marca" required>
+            <input type="number" id="edit-precio" placeholder="Precio" required>
+            <input type="number" id="edit-stock" placeholder="Stock" required>
+            <input type="text" id="edit-imagen" placeholder="URL de la Imagen" required>
+
+            <div class="modal-buttons">
+                <button type="submit" class="btn-guardar">Guardar Cambios</button>
+                <button type="button" onclick="cerrarModal()" class="btn-cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="sony.js"></script>
+</body>
+</html>

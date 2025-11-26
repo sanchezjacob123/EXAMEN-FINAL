@@ -1,4 +1,3 @@
-# EXAMEN-FINAL
 # Tienda Sony - API RESTful (Examen Parcial)
 
 ## 1. Descripción del Proyecto
